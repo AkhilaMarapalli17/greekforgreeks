@@ -10,15 +10,15 @@ class Solution {
 
         constructLps(pat, lps);
 
-        int i = 0; // index for txt
-        int j = 0; // index for pat
+        int i = 0; 
+        int j = 0; 
 
         while (i < n) {
             if (txt.charAt(i) == pat.charAt(j)) {
                 i++;
                 j++;
                 if (j == m) {
-                    res.add(i - j); // match found
+                    res.add(i - j); 
                     j = lps[j - 1];
                 }
             } else {
